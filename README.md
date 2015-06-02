@@ -12,6 +12,18 @@ Road Map
 
 Obviously.
 
+#### Obviously what?
+
+- Pagination of continuous scrolling should defer to HTML.  I mean, Tumblr doesn't really work without JS, nor does a lot of the web, but it'd be nice.  (Also pagination is the only way to know how many posts per page the blog owner wants loading.)
+
+### Basic UX Optimization
+
+- It is preferable that a post with images have all the images load before it shows.  At least, the small sized images.  the 500px ones I guess?
+	- That is, the post view should have an initial look, and a 'content loaded' look.  In some cases, the former may be "still hidden", while in others it may actually pop up with a loading animation, and in either case a transition occurs when the post itself actually is display ready.
+- Save already loaded post models to reduce requests if the user goes from, say, `/` to `/post/12345` to `/tagged/herp-derp-tag`, and the like, or at least pre-show some content while loading the first page or two.
+	- Need to keep separate track of progress through pages for each tag and index, of course...
+	- Also, provisions for custom filters that aren't directly supported by just post types and single tags.
+
 ### Modernizr to Dynamically Load/Execute Polyfills
 
 > Note: Tumblr themselves officially support only versions 9+ of IE, so while IE8 may be nice, it and older versions will only supported in as much as prefabbed code can be found for them.  No custom consideration will be given to IE8 and older.
