@@ -14,7 +14,14 @@ Obviously.
 
 #### Obviously what?
 
-- Pagination of continuous scrolling should defer to HTML.  I mean, Tumblr doesn't really work without JS, nor does a lot of the web, but it'd be nice.  (Also pagination is the only way to know how many posts per page the blog owner wants loading.)
+- Grab demo data from Tumblr's API page to stub in Models.
+	- Will be loading purely locally, although this is technically not using their example API key for evil, which is the thing they state you can't use it for.
+- Get Blog Roll working.
+	- This means getting each Post view working, which is just templates by default.
+- Get Separate Permalink View working.
+- Get Filtered Blog Rolls working. (post type, tagged...)
+- Infinite Scrolling.
+	- Pagination of continuous scrolling should defer to HTML.  I mean, Tumblr doesn't really work without JS, nor does a lot of the web, but it'd be nice.  (Also pagination is the only way to know how many posts per page the blog owner wants loading.)
 
 ### Basic UX Optimization
 
