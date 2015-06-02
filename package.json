@@ -10,16 +10,20 @@
   },
   "scripts": {
     "start": "brunch watch --server",
-    "test": "brunch test"
+    "test": "brunch test",
+    "build-tumblr": "node \"node_modules/browserify/bin/cmd.js\" \"node_modules/tumblr.js/browser/index.js\" -o \"app/lib/tumblr.js\""
   },
   "dependencies": {
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "css-brunch": ">= 1.0 < 1.8",
-    "stylus-brunch": ">= 1.0 < 1.8",
-    "handlebars-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "auto-reload-brunch": ">= 1.0 < 1.8",
+    "browser-request": "^0.3.3",
+    "browserify": "^10.2.3",
     "clean-css-brunch": ">= 1.0 < 1.8",
-    "auto-reload-brunch": ">= 1.0 < 1.8"
+    "css-brunch": ">= 1.0 < 1.8",
+    "handlebars-brunch": ">= 1.0 < 1.8",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "stylus-brunch": ">= 1.0 < 1.8",
+    "tumblr.js": "git://github.com/tumblr/tumblr.js",
+    "uglify-js-brunch": ">= 1.0 < 1.8"
   },
   "devDependencies": {}
 }

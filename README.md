@@ -5,6 +5,13 @@ This is a Tumblr theme which uses Chaplin to add dynamic functionality, allowing
 
 
 
+Build Notes
+-----------
+
+The `tumblr.js` found in `app/lib/` is generated using `npm run build-tumblr` and is committed because it's not expected that it or its dependencies will change so often.
+
+
+
 Road Map
 --------
 
