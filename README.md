@@ -12,6 +12,16 @@ The `tumblr.js` found in `app/lib/` is generated using `npm run build-tumblr` an
 
 
 
+Build Dependencies
+------------------
+
+- [Node.js](http://nodejs.org/)
+- [Brunch.io](http://brunch.io/)
+- [Tumblr.js](https://github.com/tumblr/tumblr.js)
+- [Browserify](http://browserify.org/)
+
+
+
 Road Map
 --------
 
@@ -49,3 +59,20 @@ Refer to [Modernizr's Handy Dandy List](https://github.com/Modernizr/Modernizr/w
 - *(IE8, 9; Some old FF)* [classList.js](https://github.com/eligrey/classList.js) to add jQueryless class toggling.
 - *(IE8, 9; Lots of others)* [dom4](https://github.com/WebReflection/dom4) might be better than just *classList.js*.
 	- Note that for this, *IE8* needs to also load their [ie8 library](https://github.com/WebReflection/ie8) which includes many other things modern browsers have.
+
+
+
+Weirdness
+---------
+
+Weird things I need to do since this is meant to be deployed as a theme, not as an app, meaning that the code is exposed for all to see.
+
+- The like and reblog buttons will have to be scraped from the initial load and converted into custom views, so that we can guarantee functionality thereof.
+	- Since this is a Tumblr theme, not an app proper, this should use Tumblr's theme specific like and reblog things.
+
+
+
+Example Data
+------------
+
+The example data used is copyright the respective authors and is used for demonstration purposes only.
