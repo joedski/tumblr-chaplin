@@ -22,6 +22,8 @@ Obviously.
 - Get Filtered Blog Rolls working. (post type, tagged...)
 - Infinite Scrolling.
 	- Pagination of continuous scrolling should defer to HTML.  I mean, Tumblr doesn't really work without JS, nor does a lot of the web, but it'd be nice.  (Also pagination is the only way to know how many posts per page the blog owner wants loading.)
+- Actually get a real API key to consume real data.
+	- Set up thing to use special file if loading from localhost, but use blog URL if loading on tumblr.
 
 ### Basic UX Optimization
 
@@ -30,6 +32,7 @@ Obviously.
 - Save already loaded post models to reduce requests if the user goes from, say, `/` to `/post/12345` to `/tagged/herp-derp-tag`, and the like, or at least pre-show some content while loading the first page or two.
 	- Need to keep separate track of progress through pages for each tag and index, of course...
 	- Also, provisions for custom filters that aren't directly supported by just post types and single tags.
+	- Basically, the models are given to the controller through a service which produces the correct "view"/slice into the raw data.
 
 ### Modernizr to Dynamically Load/Execute Polyfills
 
