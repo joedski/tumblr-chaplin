@@ -16,10 +16,4 @@ module.exports = Controller.extend({
             region: 'main'
         });
     },
-
-    yay: function() {
-    	this.view = new YayPageView({
-    		region: 'main'
-    	});
-    }
 });
