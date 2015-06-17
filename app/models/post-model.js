@@ -12,7 +12,7 @@ module.exports = Model.extend({
 		"timestamp": 0,
 		"state": '', // always "published" for us.
 		"format": '', // "html"|"markdown"
-		"reblog_key": '', // Would only be used when using API:/post/reblog
+		"reblog_key": '', // Would only be used when using API:/post/reblog (Is used in various other places, sometimes...)
 		"tags": [], // array<string>
 		"note_count": 0, // thankfully, included even when notes_info is not 'true'.
 
@@ -78,6 +78,8 @@ module.exports = Model.extend({
 		// - image_permalink: '',
 		// - photos: [],
 		// - highlighted: [], // ???
+		// - photoset_layout: '' // Present if this is a photoset.  A string of number which indicates the number of photos on a given row.
+		//     - Example: '11211' indicates that the first two rows have 1 photo each, the third row has 2 photos across it, and the last to rows have 1 photo each, for a total of 6 photos.
 		// 
 		// Photo Objects have the following properties:
 		//     - caption: ''
