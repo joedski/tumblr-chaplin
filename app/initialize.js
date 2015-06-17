@@ -3,7 +3,7 @@ var routes = require('routes');
 
 $(function() {
     return new Application({
-        title: 'Brunch example application',
+        title: 'Tumblr Chaplin',
         controllerSuffix: '-controller',
         routes: routes
     });

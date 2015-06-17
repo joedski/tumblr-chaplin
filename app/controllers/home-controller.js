@@ -1,7 +1,6 @@
 var Controller = require('controllers/base/controller');
 var HeaderView = require('views/home/header-view');
-var HomePageView = require('views/home/home-page-view');
-var YayPageView = require('views/yay/yay-page-view');
+var BlogRollView = require('views/home/blog-roll-view');
 
 module.exports = Controller.extend({
     beforeAction: function() {
@@ -11,8 +10,8 @@ module.exports = Controller.extend({
         });
     },
 
-    index: function() {
-        this.view = new HomePageView({
+    blogRoll: function() {
+        this.view = new BlogRollView({
             region: 'main'
         });
     },

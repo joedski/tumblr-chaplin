@@ -1,0 +1,5 @@
+{{! the title is also not escaped because it too may contain HTML.  Usually links. }}
+{{#if title}}<h3 class="post-title">{{{ title }}}</h3>{{/if}}
+<section class="text-post-body">
+	{{{ body }}}
+</section>

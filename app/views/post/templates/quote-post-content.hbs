@@ -1,0 +1,7 @@
+{{! For now, just assuming the text contains HTML already made by Tumblr.  It shouldn't contain Markdown unless you're explicitly asking for it, in which case you're a silly bumpkin.}}
+
+<div class="quote-post-text">{{{ text }}}</div>
+<div class="quote-post-source">
+	{{! Note: Currently, if there's no source_title then the source is used.  If it contains HTML, though, that'll end up in there, too, but links should have titles.}}
+	{{#if source_url}}<a class="quote-post-source-link" href="{{ source_url }}" title="{{#if source_title}}{{ source_title }}{{else}}{{ source }}{{/if}}">{{/if}}{{{ source }}}{{#if source_url}}</a>{{/if}}
+</div>

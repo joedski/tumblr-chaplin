@@ -1,5 +1,6 @@
 var View = require( 'views/base/view' );
 var PostMetaView = require( './post-meta-view' );
+var postContentViewForModel = require( './post-content-view-for-model' );
 
 var PostView = module.exports = View.extend({
 	tagName: 'article',
@@ -7,7 +8,7 @@ var PostView = module.exports = View.extend({
 
 	template: require( './templates/post' ),
 	regions: {
-		'body': '.post-body',
+		'content': '.post-content',
 		'meta': '.post-meta'
 	},
 
@@ -21,6 +22,11 @@ var PostView = module.exports = View.extend({
 		this.subview( 'meta', new PostMetaView({
 			model: this.model,
 			container: this.$( this.regions.meta )
+		}));
+
+		this.subview( 'content', new (postContentViewForModel( model ))({
+			model: this.model,
+			container: this.$( this.regions.content )
 		}));
 
 		fastdom.write( function() {
