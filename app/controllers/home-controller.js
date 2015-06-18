@@ -6,8 +6,16 @@ var PostCollectionView = require( 'views/post-collection/post-collection-view' )
 module.exports = Controller.extend({
     beforeAction: function() {
         this.constructor.__super__.beforeAction.apply(this, arguments);
-        this.reuse( 'header', HeaderView, {
-            region: 'header'
+        // this.reuse( 'header', HeaderView, {
+        //     region: 'header'
+        // });
+        this.reuse( 'header', {
+            compose: function() {
+                this.view = new HeaderView({
+                    region: 'header',
+                    model: mediator.blogModel
+                });
+            }
         });
     },
 

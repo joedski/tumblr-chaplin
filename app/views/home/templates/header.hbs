@@ -1,5 +1,9 @@
-{{! should probably use blogModel's attrs, title and description. (name is the URL-friendly name of the blog.)}}
-<h1>Tumblr Chaplin Dynamic Blog Base</h1>
-<h2>Also, descriptions!</h2>
-
-{{! nav links...? }}
+{{! <div class="container"> }}
+	{{! should probably use blogModel's attrs, title and description. (name is the URL-friendly name of the blog.)}}
+	<h1>{{ title }}</h1>
+	{{#if description}}
+	<h2>{{ description }}</h2>
+	{{/if}}
+	
+	{{! nav links...? }}
+{{! </div> }}
