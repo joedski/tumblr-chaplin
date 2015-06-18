@@ -1,0 +1,12 @@
+{{#if title}}
+<h3 class="chat-post-title">{{{ title }}}</h3>
+{{/if}}
+<section class="chat-post-dialogue">
+{{#each dialogue}}
+	<p class="chat-post-utterance">
+		<span class="chat-post-utterance-speaker">{{ name }}</span>
+		{{! TODO: determine if phrase might or might not include HTML }}
+		<span class="chat-post-utterance-phrase">{{ phrase }}</span>
+	</p>
+{{/each}}
+</section>

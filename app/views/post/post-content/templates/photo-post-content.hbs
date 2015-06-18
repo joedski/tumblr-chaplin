@@ -2,8 +2,13 @@
 	{{! Note: To actually handle photosets (which can have layouts) will require more complex work.  For now, just spamming photos here.}}
 	{{#each photos}}
 	<figure style="width: {{ blogroll_size.width }}px; height: {{ blogroll_size.height }}px; background: gray;">
-		:D
-		{{! FPO... }}
+		<img src="{{ blogroll_size.url }}" alt="{{ caption }}" width="{{ blogroll_size.width }}" height="{{ blogroll_size.height }}">
+
+		{{#if caption }}
+		<figcaption>
+			{{{ caption }}}
+		</figcaption>
+		{{/if}}
 	</figure>
 	{{/each}}
 </div>

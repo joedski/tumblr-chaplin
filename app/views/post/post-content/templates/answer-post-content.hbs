@@ -1,0 +1,18 @@
+<div class="answer-post-content">
+	<section class="answer-post-question">
+		<div class="answer-post-question-asker {{#unless asking_url}}answer-post-question-asker-anonymous{{/unless}}">
+			{{#if asking_url}}<a href="{{ asking_url }}" class="answer-post-question-asker-link">{{/if}}
+				{{asking_name}}
+			{{#if asking_url}}</a>{{/if}}
+		</div>
+
+		<div class="answer-post-question-body">
+			{{ question }}
+		</div>
+	</section>
+
+	<section class="answer-post-answer">
+		{{! May contain HTML... }}
+		{{{ answer }}}
+	</section>
+</div>

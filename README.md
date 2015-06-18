@@ -1,6 +1,8 @@
 Tumblr Chaplin Base
 ===================
 
+> [They] were so preoccupied with whether they could that they didn't stop to think if they *should*. -Ian Malcolm
+
 This is a Tumblr theme which uses Chaplin to add dynamic functionality, allowing for themes with complex interaction, as well as complex ways to shoot yourself in the foot.
 
 

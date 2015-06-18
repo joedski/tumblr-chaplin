@@ -14,7 +14,7 @@ module.exports = Model.extend({
 		"format": '', // "html"|"markdown"
 		"reblog_key": '', // Would only be used when using API:/post/reblog (Is used in various other places, sometimes...)
 		"tags": [], // array<string>
-		"note_count": 0, // thankfully, included even when notes_info is not 'true'.
+		"note_count": 0 // thankfully, included even when notes_info is not 'true'.
 
 		// Other general props:
 		// - bookmarklet: true if was created using the Tumblr Bookmarklet.
@@ -84,7 +84,8 @@ module.exports = Model.extend({
 		// Photo Objects have the following properties:
 		//     - caption: ''
 		//     - alt_sizes: []
-		//         - width: 0 // Note that the size is either the certain width, or a width smaller than the certain width.
+		//         // Prefabbed widths include: 1280, 500, 400, 250, 100, and 75 (square)
+		//         - width: 0 // Note that the size is either a certain width, or a width smaller than that certain width.
 		//         - height: 0
 		//         - url: ''
 		//     - original_size:
@@ -128,6 +129,9 @@ module.exports = Model.extend({
 
 		// Video posts:
 		// - caption: ''
+		// - thumbnail_url: ''
+		// - thumbnail_width: 0
+		// - thumbnail_height: 0
 		// - player: []
 		//     - width: 0
 		//     - embed_code: '' - Exact code varies by source, but since the width is present, it should be scalable.
@@ -138,6 +142,5 @@ module.exports = Model.extend({
 		// - question: ''
 		// - answer: ''
 
-		// 
 	}
 });

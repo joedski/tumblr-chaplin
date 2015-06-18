@@ -11,6 +11,7 @@ module.exports = View.extend({
 		var attributes = this.model.attributes;
 
 		// Prefabbed sizes include: 1280, 500, 400, 250, 100, and 75 (square)
+		// TODO: Move blogrollSizeWidth out to some general blog settings thing.  Probably on mediator.
 		var blogrollSizeWidth = 500;
 
 		return _.defaults({
@@ -26,11 +27,11 @@ module.exports = View.extend({
 								width: blogrollSizeWidth,
 								height: blogrollSizeWidth / aspectRatio
 							}, size );
-						}(	_.chain( photoAttrs.alt_sizes )
-								.filter( function( size ) { return size.width <= blogrollSizeWidth })
-								.reduce( function( largestSize, size ) { if( size.width > largestSize.width ) return size; else return largestSize; })
+						}( _.chain( photoAttrs.alt_sizes )
+							.filter( function( size ) { return size.width <= blogrollSizeWidth })
+							.reduce( function( largestSize, size ) { if( size.width > largestSize.width ) return size; else return largestSize; })
+							// Note: Lodash automatically unwraps values when a function returns a "scalar" (single value) rather than a collection.  reduce and reduceRight are examples of such functions.
 						))
-							// Note: Lodash automatically unwraps values when a function returns a "scalar" rather than a collection.
 				}, photoAttrs );
 			})
 		}, attributes );

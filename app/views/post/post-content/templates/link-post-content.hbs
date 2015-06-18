@@ -1,0 +1,32 @@
+{{#if photos}}
+{{! TODO: create photo-collection-view }}
+<section class="link-post-photo-content"></section>
+{{/if}}
+
+<section class="link-post-link-anchor">
+	<div>
+		<a href="{{ url }}" title="{{#if title }}{{ title }}{{else}}{{ url }}" class="link-post-link">{{#if title }}{{ title }}{{else}}{{ url }}</a>
+	</div>
+	{{#if author }}
+	<div class="link-post-link-author">
+		<span>By {{ author }}</span>
+	</div>
+	{{/if}}
+	{{#if publisher }}
+	<div class="link-post-link-publisher">
+		<span>Published by {{ publisher }}</span>
+	</div>
+	{{/if}}
+</section>
+
+{{#if excerpt}}
+<section class="link-post-link-excerpt">
+	<blockquote>{{{ excerpt }}}</blockquote>
+</section>
+{{/if}}
+
+{{#if description}}
+<section class="link-post-link-description">
+	{{{ description }}}
+</section>
+{{/if}}
