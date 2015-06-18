@@ -1,13 +1,13 @@
 var postViewTypeMap = {
-	'*': require( 'views/post/test-post-content-view' ),
-	'text': require( 'views/post/text-post-content-view' ),
-	'quote': require( 'views/post/quote-post-content-view' ),
-	// 'link': require( 'views/post/link-post-content-view' ),
-	// 'answer': require( 'views/post/answer-post-content-view' ),
-	// 'video': require( 'views/post/video-post-content-view' ),
-	// 'audio': require( 'views/post/audio-post-content-view' ),
-	'photo': require( 'views/post/photo-post-content-view' ),
-	// 'chat': require( 'views/post/chat-post-content-view' )
+	'*': require( 'views/post/post-content/test-post-content-view' ),
+	'text': require( 'views/post/post-content/text-post-content-view' ),
+	'quote': require( 'views/post/post-content/quote-post-content-view' ),
+	// 'link': require( 'views/post/post-content/link-post-content-view' ),
+	// 'answer': require( 'views/post/post-content/answer-post-content-view' ),
+	// 'video': require( 'views/post/post-content/video-post-content-view' ),
+	// 'audio': require( 'views/post/post-content/audio-post-content-view' ),
+	'photo': require( 'views/post/post-content/photo-post-content-view' ),
+	// 'chat': require( 'views/post/post-content/chat-post-content-view' )
 };
 
 module.exports = function postContentViewForModel( model ) {
