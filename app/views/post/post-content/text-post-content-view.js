@@ -1,6 +1,6 @@
-var PostView = require( './post-view' );
+var View = require( 'views/base/view' );
 
-module.exports = PostView.extend({
+module.exports = View.extend({
 	className: 'post-content text-post-content',
 	template: require( './templates/text-post-content' ),
 });

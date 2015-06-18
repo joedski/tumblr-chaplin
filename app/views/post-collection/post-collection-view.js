@@ -3,5 +3,6 @@ var PostView = require( 'views/post/post-view' );
 
 module.exports = CollectionView.extend({
 	template: require( './templates/post-collection' ),
-	itemView: PostView
+	itemView: PostView,
+	listSelector: '.post-collection-list'
 });

@@ -1,6 +1,6 @@
-var mediator = require( 'app/mediator' );
-var testFixture = require( 'app/testFixture' );
-var PostCollection = require( 'app/models/post-collection' );
+var mediator = require( 'mediator' );
+var testFixture = require( 'test-fixture' );
+var PostCollection = require( 'models/post-collection' );
 // eventually, BlogModel...
 
 // The application object.
@@ -15,7 +15,8 @@ module.exports = Application = Chaplin.Application.extend({
     },
 
     initMediator: function() {
-        mediator.postCollection = new PostCollection({ models: testFixture.getPage( 0 ).response.posts });
+        mediator.postCollection = new PostCollection();
+        mediator.postCollection.add( testFixture.getPage( 0 ).response.posts );
 
         this.constructor.__super__.initMediator.apply(this, arguments);
     },

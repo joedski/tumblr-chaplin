@@ -1,4 +1,4 @@
-var Model = require( 'app/models/base/model' );
+var Model = require( 'models/base/model' );
 
 module.exports = Model.extend({
 	defaults: {

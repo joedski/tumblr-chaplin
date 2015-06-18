@@ -1,4 +1,4 @@
-var Collection = require( 'app/models/base/collection' );
+var Collection = require( 'models/base/collection' );
 var PostModel = require( './post-model' );
 
 module.exports = Collection.extend({

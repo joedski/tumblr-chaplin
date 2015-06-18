@@ -21,12 +21,14 @@ var PostView = module.exports = View.extend({
 
 		this.subview( 'meta', new PostMetaView({
 			model: this.model,
-			container: this.$( this.regions.meta )
+			container: this.$( this.regions.meta ),
+			autoRender: true
 		}));
 
-		this.subview( 'content', new (postContentViewForModel( model ))({
+		this.subview( 'content', new (postContentViewForModel( this.model ))({
 			model: this.model,
-			container: this.$( this.regions.content )
+			container: this.$( this.regions.content ),
+			autoRender: true
 		}));
 
 		fastdom.write( function() {

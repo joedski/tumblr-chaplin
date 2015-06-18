@@ -1,6 +1,7 @@
+var mediator = require( 'mediator' );
 var Controller = require('controllers/base/controller');
 var HeaderView = require('views/home/header-view');
-var BlogRollView = require('views/home/blog-roll-view');
+var PostCollectionView = require( 'views/post-collection/post-collection-view' );
 
 module.exports = Controller.extend({
     beforeAction: function() {
