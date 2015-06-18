@@ -33,9 +33,9 @@ Obviously.
 
 #### Obviously what?
 
-- Grab demo data from Tumblr's API page to stub in Models.
+- *x* Grab demo data from Tumblr's API page to stub in Models.
 	- Will be loading purely locally, although this is technically not using their example API key for evil, which is the thing they state you can't use it for.
-- Get Blog Roll working.
+- *x* Get Blog Roll working. (works now except you can't actually page through pages...)
 	- This means getting each Post view working, which is just templates by default.
 - Get Separate Permalink View working.
 - Get Filtered Blog Rolls working. (post type, tagged...)
