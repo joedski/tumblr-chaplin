@@ -6,7 +6,7 @@ module.exports = View.extend({
     regions: {
         header: '#header',
         blogRoll: '#blog-roll',
-        quicklook: '#quicklook'
+        permalink: '#permalink'
     },
     template: require('./templates/site')
 });

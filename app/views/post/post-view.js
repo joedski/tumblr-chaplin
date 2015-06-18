@@ -8,8 +8,8 @@ var PostView = module.exports = View.extend({
 
 	template: require( './templates/post' ),
 	regions: {
-		'content': '.post-content',
-		'meta': '.post-meta'
+		'content': '.post-content-container',
+		'meta': '.post-meta-container'
 	},
 
 	getTemplateData: function() {

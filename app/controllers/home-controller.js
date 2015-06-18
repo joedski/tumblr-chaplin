@@ -10,9 +10,12 @@ module.exports = Controller.extend({
         });
     },
 
-    blogRoll: function() {
-        this.view = new BlogRollView({
-            region: 'main'
+    blogRoll: function( parameters ) {
+        console.log( 'home#blogRoll received', parameters );
+
+        this.view = new PostCollectionView({
+            collection: mediator.postCollection,
+            region: 'blogRoll'
         });
     },
 });
