@@ -5,7 +5,7 @@ var BlogRollView = require('views/home/blog-roll-view');
 module.exports = Controller.extend({
     beforeAction: function() {
         this.constructor.__super__.beforeAction.apply(this, arguments);
-        this.reuse('header', HeaderView, {
+        this.reuse( 'header', HeaderView, {
             region: 'header'
         });
     },
